@@ -113,9 +113,7 @@ TelaPrincipal.login=0; // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameClosed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-if(TelaPrincipal.listUsuarios.size()==0){
-    JOptionPane.showMessageDialog(null, "Não Existe Usuarios Cadastrados"); 
-}
+
 
 //Acesso do Administrador
         if(textlogin.getText().equals("admin") && senhalogin.getText().equals("123")){
@@ -153,20 +151,24 @@ if(TelaPrincipal.listUsuarios.size()==0){
                     senhalogin.setText("");
                     this.dispose();
                     
-                    System.out.print("dasfdafadfas");
+                    
                     return;
                     
             }else{
-             JOptionPane.showMessageDialog(null, "Senha Incorreta!"); 
+             JOptionPane.showMessageDialog(null, "Senha Incorreta!");
+             return;
                 }
                     
             }
                         
         }
-        JOptionPane.showMessageDialog(null, "Usuario não Existe"); 
-        
+       
+        if(TelaPrincipal.listUsuarios.size()==0){
+    JOptionPane.showMessageDialog(null, "Não Existe Usuarios Cadastrados"); 
+          }else{
+         JOptionPane.showMessageDialog(null, "Usuario não Existe"); 
+                }
         }
-        
     }//GEN-LAST:event_jButton1MouseClicked
 
 

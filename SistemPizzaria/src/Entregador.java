@@ -16,6 +16,7 @@ public class Entregador extends javax.swing.JInternalFrame {
      */
     public Entregador(String nome) {
         initComponents();
+        TelaPrincipal.login=1;
         this.nome=nome;
         nome_entregador.setText(nome);
     }
@@ -38,6 +39,23 @@ public class Entregador extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Entregador");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jLabel1.setText("Entregador: ");
 
@@ -85,6 +103,10 @@ public class Entregador extends javax.swing.JInternalFrame {
 
         setBounds(50, 50, 410, 308);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
+        TelaPrincipal.login=0;
+    }//GEN-LAST:event_formInternalFrameClosed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

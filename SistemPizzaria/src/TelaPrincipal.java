@@ -15,12 +15,14 @@ import java.util.List;
 public class TelaPrincipal extends javax.swing.JFrame {
    public Login l1 = new Login();
    public static List<Usuario> listUsuarios;
-   public static int login=0;
+   public static List<Produto> listProdutos;
+   public static int login;
     /**
      * Creates new form TelaPrincipal
      */
     public TelaPrincipal() {
         listUsuarios = new ArrayList<>();
+        login=0;
         initComponents();
     }
 

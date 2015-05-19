@@ -14,8 +14,11 @@ public class Atendente extends javax.swing.JInternalFrame {
     /**
      * Creates new form Atendente
      */
+    
     public Atendente(String nome) {
+        TelaPrincipal.login=1;
         initComponents();
+        
         this.nome=nome;
         nome_atendente.setText(nome);
     }
@@ -38,6 +41,23 @@ public class Atendente extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Atendente");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosed(evt);
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         nome_atendente.setText("teste");
 
@@ -85,6 +105,10 @@ public class Atendente extends javax.swing.JInternalFrame {
 
         setBounds(50, 50, 410, 308);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formInternalFrameClosed(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosed
+       TelaPrincipal.login=0; 
+    }//GEN-LAST:event_formInternalFrameClosed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
