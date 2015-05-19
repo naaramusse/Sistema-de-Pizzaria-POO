@@ -13,6 +13,8 @@ public class Usuario {
     private String matricula;
     private String senha;
     private String tipo;
+
+
     private String cpf;
 
     
