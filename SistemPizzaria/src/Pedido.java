@@ -24,4 +24,28 @@ public class Pedido {
         this.cliente=cliente;
         this.listProdutos=listProdutos;
     }
+
+    int getNumero(){
+      return numero;
+    }
+
+    void setNumero(int numero){
+      this.numero=numero;
+    }
+
+    Cliente getCliente(){
+      return cliente;
+    }
+
+    void setCliente(int cliente){
+      this.cliente=cliente;
+    }
+
+    List<Produto> getProduto(){
+      return listProdutos;
+    }
+
+    void setProduto(int listProdutos){
+      this.listProdutos=listProdutos;
+    }
 }
